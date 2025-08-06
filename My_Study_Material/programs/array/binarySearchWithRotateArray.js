@@ -1,24 +1,26 @@
 const arr = [3, 4, 5, 6, 7, 0, 1, 2];
-const target = 0;
+const target = 3;
 
 function sortedArrayWithBinary(arr, target, left = 0, right = arr.length - 1) {
-    let mid = Math.floor((left + right) / 2)
+    let mid = Math.floor(left + right / 2)
 
-    if (arr[mid] == target) { return mid }
+    if (arr[mid] == target) {
+        return mid
+    }
 
-    if (arr[left] < arr[mid]) {
+    if (arr[left] <= arr[mid]) {
         if (arr[left] <= target && target < arr[mid]) {
             return sortedArrayWithBinary(arr, target, left, mid)
         } else {
-            return sortedArrayWithBinary(arr, target, mid, right)
+            return sortedArrayWithBinary(arr, target, mid, left)
         }
     } else {
-        if (arr[right] <= target && target < arr[mid]) {
-            return sortedArrayWithBinary(arr, target, mid, right)
+        if (arr[mid] < target && target <= arr[right]) {
+            return sortedArrayWithBinary(arr, target, mid, left)
         } else {
             return sortedArrayWithBinary(arr, target, left, mid)
         }
     }
 }
 
-console.log(sortedArrayWithBinary(arr,target))
+console.log(sortedArrayWithBinary(arr, target))

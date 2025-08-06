@@ -11,13 +11,16 @@ let arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 
 
 function calKadaneAlgo(arr) {
-    let maxSoFar = arr[0]
-    let maxEnding = arr[0]
-    for (let i = 0; i < arr.length; i++) {
-        maxEnding = Math.max(arr[i], maxEnding + arr[i])
-        maxSoFar = Math.max(maxSoFar, maxEnding)
+    let currentSum = 0
+    let maxSum = 0
+
+    // Rule = max(element, currentSum+element)
+    for (let index = 0; index < arr.length; index++) {
+        const element = arr[index];
+        currentSum = Math.max(element, currentSum + element)
+        maxSum = Math.max(currentSum, maxSum)
     }
-    return maxSoFar
+    return maxSum
 }
 
 console.log(calKadaneAlgo(arr))
