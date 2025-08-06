@@ -18,7 +18,16 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/programs/array/p4.js"
+            "program": "${workspaceFolder}/My_Study_Material/programs/linkedlist/simpleLinkedList.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug binarySearch.js",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/My_Study_Material/programs/array/binarySearch.js"
         }
     ]
 }
