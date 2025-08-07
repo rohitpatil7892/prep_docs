@@ -28,6 +28,33 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}/My_Study_Material/programs/array/binarySearch.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug rotateWithKNumber.js",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/My_Study_Material/programs/array/rotateWithKNumber.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug slidingWindow.js",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/My_Study_Material/programs/array/slidingWindow.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug slidingWindow2.js",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/My_Study_Material/programs/array/slidingWindow2.js"
         }
     ]
 }
