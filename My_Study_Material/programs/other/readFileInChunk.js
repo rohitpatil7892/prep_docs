@@ -12,6 +12,8 @@ readStream.on('error', (err)=>{
     console.log(err)
 })
 
+// write a data into file
+
 let dataToWrite = [
     '\nThis is new data want to add for testing of write stream chunk 01',
     '\nThis is new data want to add for testing of write stream chunk 02'
